@@ -8,7 +8,7 @@
             "background": "#333333",
             "foreground": "#ff0000",
             "leading_diamond": "\ue0b6",
-            "style": "diamond",
+            "style": "powerline",
             "template": " {{ .UserName }} ",
             "trailing_diamond": "\ue0b0",
             "type": "session"
