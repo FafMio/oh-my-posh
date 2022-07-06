@@ -16,46 +16,31 @@
             },
             "style": "diamond",
             "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
-            "trailing_diamond": "<transparent,#FEF5ED>\ue0b2</>",
             "type": "os"
           },
           {
             "background": "#FEF5ED",
             "foreground": "#011627",
-            "leading_diamond": "\ue0b2",
             "style": "diamond",
-            "template": "\uf489 {{ .Name }}",
+            "template": "{{ .UserName }}<#17D7A0,#FEF5ED>@</><#516BEB,#FEF5ED>{{ .HostName }}</>",
             "trailing_diamond": "<transparent,#FEF5ED>\ue0b2</>",
-            "type": "shell"
+            "type": "session"
           },
           {
             "background": "#516BEB",
             "foreground": "#ffffff",
             "leading_diamond": "\ue0b2",
             "style": "diamond",
-            "template": "\uf85a CPU: {{ round .PhysicalPercentUsed .Precision }}% | ",
+            "template": " CPU: {{ round .PhysicalPercentUsed .Precision }}% | ",
             "type": "sysinfo"
           },
           {
             "background": "#516BEB",
             "foreground": "#ffffff",
             "style": "diamond",
-            "template": "MEM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB \uf85a ",
-            "trailing_diamond": "<transparent,#516BEB>\ue0b2</>",
-            "type": "sysinfo"
-          },
-          {
-            "background": "#575656",
-            "foreground": "#d6deeb",
-            "leading_diamond": "\ue0b2",
-            "properties": {
-              "style": "roundrock",
-              "threshold": 0
-            },
-            "style": "diamond",
-            "template": " {{ .FormattedMs }} ",
+            "template": "MEM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB ",
             "trailing_diamond": "\ue0b0",
-            "type": "executiontime"
+            "type": "sysinfo"
           }
         ],
         "type": "prompt"
