@@ -6,6 +6,13 @@
         "segments": [
           {
             "background": "#333333",
+            "foreground": "#fff",
+            "style": "powerline",
+            "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+            "type": "os"
+          },
+          {
+            "background": "#333333",
             "foreground": "#ff0000",
             "leading_diamond": "\ue0b6",
             "style": "powerline",
@@ -51,6 +58,14 @@
             "foreground": "#ffffff",
             "background": "#4063D8",
             "template": " \ue73d {{ .Full }} "
+          },
+          {
+            "type": "java",
+            "style": "powerline",
+            "powerline_symbol": "\uE0B0",
+            "foreground": "#ffffff",
+            "background": "#ff8800",
+            "template": " \uE738 {{ .Full }} "
           }
         ],
         "type": "prompt"
