@@ -29,13 +29,8 @@
                 {
                     "background": "#516BEB",
                     "foreground": "#ffffff",
-                    "properties": {
-                        "folder_icon": "\uf07b ",
-                        "folder_separator_icon": " \uf554 ",
-                        "home_icon": "\uf7db "
-                    },
                     "style": "diamond",
-                    "template": " {{ .Path }} ",
+                    "template": " {{ .PWD }} ",
                     "leading_diamond": "\ue0b2",
                     "trailing_diamond": "\ue0b0",
                     "type": "path"
